@@ -10,7 +10,13 @@
 			"name": "get Categorias",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwidGlwbyI6IkEiLCJ0ZWxlZm9uZSI6Iig1NCk5OTk4NC00MzQ4Iiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdfSwiaWF0IjoxNjk5MjczNDE0LCJleHAiOjE2OTkyNzM3MTR9.Y6ZUu0Xr_94uBknwRIlD_JpmSONLUZwisBbjXBvgz1I",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "localhost:3002/categoria",
 					"host": [
@@ -28,7 +34,13 @@
 			"name": "Add Categoria",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwidGlwbyI6IkEiLCJ0ZWxlZm9uZSI6Iig1NCk5OTk4NC00MzQ4Iiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdfSwiaWF0IjoxNjk5MjczNDE0LCJleHAiOjE2OTkyNzM3MTR9.Y6ZUu0Xr_94uBknwRIlD_JpmSONLUZwisBbjXBvgz1I",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{ \"nome\" : \"EletroDomesticos\"}",
@@ -221,6 +233,33 @@
 					"path": [
 						"produto",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"jorgebavaresco@ifsul.edu.br\",\n    \"senha\" : \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
 					]
 				}
 			},

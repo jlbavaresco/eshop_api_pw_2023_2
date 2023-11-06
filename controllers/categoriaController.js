@@ -11,6 +11,8 @@ const getCategorias = async (request, response) => {
 }
 
 const addCategoria = async (request, response) => {
+    // capturo o usuário que foi decodificado do token
+    console.log(JSON.stringify(request.usuario));
     await addCategoriaDB(request.body)
         .then(data => response.status(200).json({
             status: "success", message: "Categoria criada",
